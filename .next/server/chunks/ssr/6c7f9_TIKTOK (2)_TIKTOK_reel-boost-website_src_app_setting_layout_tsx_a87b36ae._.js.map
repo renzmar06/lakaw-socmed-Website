@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Renz-Lunci/Downloads/TIKTOK%20%282%29/TIKTOK/reel-boost-website/src/app/setting/layout.tsx"],"sourcesContent":["\"use client\";\r\n\r\nexport default function SettingLayout({\r\n  children,\r\n}: {\r\n  children: React.ReactNode;\r\n}) {\r\n  return (\r\n  \r\n<>\r\n      {/* Page Content, centered in remaining space */}\r\n      <div className=\"w-full flex justify-center\">\r\n        <div className=\"w-full sm:max-w-3xl mt-20 sm:p-6 mb-6 rounded-lg sm:min-h-[820px]\" style={{ boxShadow: \"0px 1.22px 14.55px 0px #0000000F\" }}>\r\n          {children}\r\n        </div>\r\n      </div>\r\n      </>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;AAAA;;AAEe,SAAS,cAAc,EACpC,QAAQ,EAGT;IACC,qBAEF;kBAEM,cAAA,oTAAC;YAAI,WAAU;sBACb,cAAA,oTAAC;gBAAI,WAAU;gBAAoE,OAAO;oBAAE,WAAW;gBAAmC;0BACvI;;;;;;;;;;;;AAKX","debugId":null}}]
+}

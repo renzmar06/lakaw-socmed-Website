@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/Desktop/TIKTOK/reel-boost-website/src/app/assets/colors.css"],"sourcesContent":[":root {\r\n  --color-primary: #ffffff;\r\n  --color-secondary: #000000;\r\n  --color-dark:#000000;\r\n  --color-gray:#A4A4A4;\r\n  --color-bg-gray:#EDF1F3;\r\n  --color-main-green:#1A9D77;\r\n  --gradient-background-color:linear-gradient(141.72deg, rgba(35, 156, 87, 0.12) -1.01%, rgba(1, 159, 200, 0.12) 103.86%);\r\n  --gradient-background-dark:linear-gradient(141.72deg, #239C57 -1.01%, #019FC8 103.86%);\r\n  --color-border-gray:#EFEFEF;\r\n  --color-dark-gray:#3A3A3A;\r\n  --color-red:#EB1212;\r\n  --color-green:#009A29;\r\n  --color-border-color:#E2E2E2;\r\n\r\n  /* --color-yellow: #fafafa; */\r\n}\r\n\r\n/* .dark {\r\n  --color-primary: #252525;\r\n  --color-secondary: #1d1d1d;\r\n  --border-color: #eeeeee14;\r\n  --dark-text: #ffffff;\r\n  --light-text: #a4a4a4;\r\n  --modal-bg: #363636;\r\n} */\r\n\r\n"],"names":[],"mappings":"AAAA"}}]
+}

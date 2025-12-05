@@ -1,0 +1,18 @@
+/* [project]/Desktop/TIKTOK/reel-boost-website/src/app/assets/colors.css [app-client] (css) */
+:root {
+  --color-primary: #fff;
+  --color-secondary: #000;
+  --color-dark: #000;
+  --color-gray: #a4a4a4;
+  --color-bg-gray: #edf1f3;
+  --color-main-green: #1a9d77;
+  --gradient-background-color: linear-gradient(141.72deg, rgba(35, 156, 87, .12) -1.01%, rgba(1, 159, 200, .12) 103.86%);
+  --gradient-background-dark: linear-gradient(141.72deg, #239c57 -1.01%, #019fc8 103.86%);
+  --color-border-gray: #efefef;
+  --color-dark-gray: #3a3a3a;
+  --color-red: #eb1212;
+  --color-green: #009a29;
+  --color-border-color: #e2e2e2;
+}
+
+/*# sourceMappingURL=Desktop_TIKTOK_reel-boost-website_src_app_assets_colors_css_bad6b30c._.single.css.map*/
