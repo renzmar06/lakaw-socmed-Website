@@ -890,7 +890,7 @@ function GPayPayment() {
         if (!token) return;
         const fetchConfig = async ()=>{
             try {
-                const res = await fetch(`${("TURBOPACK compile-time value", "http://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api")}/project_conf`);
+                const res = await fetch(`${("TURBOPACK compile-time value", "https://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api")}/project_conf`);
                 const data = await res.json();
                 if (data?.data?.gpay_merch_id) setMerchantId(data.data.gpay_merch_id);
                 if (data?.data?.gpay_merch_name) setMerchantName(data.data.gpay_merch_name);
@@ -1012,7 +1012,7 @@ function PaymentWithPaypal() {
         if (!token) return;
         const fetchConfig = async ()=>{
             try {
-                const res = await fetch(`${("TURBOPACK compile-time value", "http://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api")}/project_conf`);
+                const res = await fetch(`${("TURBOPACK compile-time value", "https://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api")}/project_conf`);
                 const data = await res.json();
                 setPaypalClientId(data?.data.paypal_public_key || "");
             } catch (error) {}
@@ -1296,7 +1296,7 @@ function PaymentWithStripe() {
         if (!token) return;
         const fetchConfig = async ()=>{
             try {
-                const res = await fetch(`${("TURBOPACK compile-time value", "http://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api")}/project_conf`);
+                const res = await fetch(`${("TURBOPACK compile-time value", "https://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api")}/project_conf`);
                 const data = await res.json();
                 if (data?.data?.stripe_public_key) {
                     setStripePromise((0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f40$stripe$2f$stripe$2d$js$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["loadStripe"])(data.data.stripe_public_key));

@@ -1721,7 +1721,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technolog
 const fetchNotifications = async (param)=>{
     let { pageParam = 1 } = param;
     const token = __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get("Reelboost_auth_token");
-    const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("".concat(("TURBOPACK compile-time value", "http://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/users/get-notification-list"), {
+    const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("".concat(("TURBOPACK compile-time value", "https://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/users/get-notification-list"), {
         page: pageParam
     }, {
         headers: {
@@ -2917,7 +2917,7 @@ function SuggestedAccounts() {
                     setIsLoading(true);
                     try {
                         var _result_data;
-                        const apiUrl = token ? "".concat(("TURBOPACK compile-time value", "http://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/users/find-user-not-following") : "".concat(("TURBOPACK compile-time value", "http://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/users/find-user-no-auth");
+                        const apiUrl = token ? "".concat(("TURBOPACK compile-time value", "https://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/users/find-user-not-following") : "".concat(("TURBOPACK compile-time value", "https://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/users/find-user-no-auth");
                         const response = await fetch(apiUrl, {
                             method: "POST",
                             headers: {

@@ -53,7 +53,7 @@ function EditProfile() {
         if (!token) return;
         const fetchConfig = async ()=>{
             try {
-                const res = await fetch(`${("TURBOPACK compile-time value", "http://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api")}/project_conf`);
+                const res = await fetch(`${("TURBOPACK compile-time value", "https://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api")}/project_conf`);
                 const data = await res.json();
                 if (data?.data?.mediaflow) {
                     setMediaflow(data.data.mediaflow);

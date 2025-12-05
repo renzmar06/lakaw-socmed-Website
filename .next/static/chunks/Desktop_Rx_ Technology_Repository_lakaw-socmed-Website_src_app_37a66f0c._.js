@@ -17,7 +17,7 @@ const socketInstance = ()=>{
     const token = __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get("Reelboost_auth_token");
     if (!socket) {
         const token = __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get("Reelboost_auth_token");
-        socket = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$socket$2e$io$2d$client$2f$build$2f$esm$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["io"])("".concat(("TURBOPACK compile-time value", "http://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api")), {
+        socket = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$socket$2e$io$2d$client$2f$build$2f$esm$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["io"])("".concat(("TURBOPACK compile-time value", "https://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api")), {
             path: "/socket",
             transports: [
                 "websocket"
@@ -452,7 +452,7 @@ const useApiPost = ()=>{
                     Authorization: "Bearer ".concat(token)
                 }
             };
-            const response = await __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post(("TURBOPACK compile-time value", "http://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api") + url, bodyData, {
+            const response = await __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post(("TURBOPACK compile-time value", "https://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api") + url, bodyData, {
                 headers
             });
             // ✅ Check for JSON response

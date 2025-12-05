@@ -2103,7 +2103,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technolog
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/Rx/ Technology/Repository/lakaw-socmed-Website/node_modules/@tanstack/react-query/build/modern/useQuery.js [app-client] (ecmascript)");
 var _s = __turbopack_context__.k.signature();
 ;
-const baseURL = ("TURBOPACK compile-time value", "http://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api");
+const baseURL = ("TURBOPACK compile-time value", "https://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api");
 const fetchUserProfileDetails = async (token)=>{
     const res = await fetch("".concat(baseURL, "/users/updateUser"), {
         method: "POST",
@@ -2158,7 +2158,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technolog
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/Rx/ Technology/Repository/lakaw-socmed-Website/node_modules/@tanstack/react-query/build/modern/useQuery.js [app-client] (ecmascript)");
 var _s = __turbopack_context__.k.signature();
 ;
-const baseURL = ("TURBOPACK compile-time value", "http://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api");
+const baseURL = ("TURBOPACK compile-time value", "https://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api");
 const fetchAvatars = async (token)=>{
     const res = await fetch("".concat(baseURL, "/avatar/show-avatars"), {
         method: "POST",
@@ -2223,7 +2223,7 @@ const useReportTypes = ()=>{
             "useReportTypes.useQuery": async ()=>{
                 const token = __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get("Reelboost_auth_token");
                 if (!token) throw new Error("Auth token not found");
-                const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("".concat(("TURBOPACK compile-time value", "http://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/report/report-types"), {}, {
+                const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("".concat(("TURBOPACK compile-time value", "https://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/report/report-types"), {}, {
                     headers: {
                         Authorization: "Bearer ".concat(token)
                     }
@@ -2265,7 +2265,7 @@ var _s = __turbopack_context__.k.signature();
 ;
 const fetchGiftCategories = async (page)=>{
     const token = __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get("Reelboost_auth_token");
-    const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("".concat(("TURBOPACK compile-time value", "http://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/gift/get-gift-category"), {
+    const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("".concat(("TURBOPACK compile-time value", "https://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/gift/get-gift-category"), {
         page
     }, {
         headers: {
@@ -2317,7 +2317,7 @@ var _s = __turbopack_context__.k.signature();
 const fetchGifts = async (param)=>{
     let { pageParam = 1, categoryId } = param;
     const token = __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get("Reelboost_auth_token");
-    const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("".concat(("TURBOPACK compile-time value", "http://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/gift/get-gift"), {
+    const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("".concat(("TURBOPACK compile-time value", "https://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/gift/get-gift"), {
         page: pageParam,
         gift_category_id: categoryId
     }, {
@@ -2387,7 +2387,7 @@ var _s = __turbopack_context__.k.signature();
 const fetchReceivedGifts = async (param)=>{
     let { pageParam = 1, socialId, receiverId } = param;
     const token = __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get("Reelboost_auth_token");
-    const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("".concat(("TURBOPACK compile-time value", "http://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/transaction/history"), {
+    const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("".concat(("TURBOPACK compile-time value", "https://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/transaction/history"), {
         page: pageParam,
         social_id: socialId,
         reciever_id: receiverId,
@@ -2467,7 +2467,7 @@ const useReplies = (commentRefId, enabled)=>{
     const fetchReplies = async ()=>{
         var _data_data;
         const token = __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get("Reelboost_auth_token");
-        const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("".concat(("TURBOPACK compile-time value", "http://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/comment/show-comment"), {
+        const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("".concat(("TURBOPACK compile-time value", "https://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/comment/show-comment"), {
             include: "User",
             page: 1,
             comment_ref_id: commentRefId
@@ -2541,7 +2541,7 @@ const useCommentList = (socialId, page, comment_ref_id)=>{
                         comment_ref_id
                     } : {}
                 };
-                const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("".concat(("TURBOPACK compile-time value", "http://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/comment/show-comment"), requestBody, {
+                const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("".concat(("TURBOPACK compile-time value", "https://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/comment/show-comment"), requestBody, {
                     headers: {
                         Authorization: "Bearer ".concat(token)
                     }
@@ -2584,7 +2584,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technolog
 async function updateNotificationStatus(notification_ids, view_status) {
     const token = __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get("Reelboost_auth_token");
     try {
-        const res = await __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("".concat(("TURBOPACK compile-time value", "http://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/users/update-notification-list"), {
+        const res = await __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("".concat(("TURBOPACK compile-time value", "https://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/users/update-notification-list"), {
             notification_ids: notification_ids,
             view_status
         }, {

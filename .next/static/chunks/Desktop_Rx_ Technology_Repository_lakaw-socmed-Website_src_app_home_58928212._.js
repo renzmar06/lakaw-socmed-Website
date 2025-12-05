@@ -536,7 +536,7 @@ function UploadReel() {
                 "UploadReel.useEffect.fetchConfig": async ()=>{
                     try {
                         var _data_data;
-                        const res = await fetch("".concat(("TURBOPACK compile-time value", "http://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/project_conf"));
+                        const res = await fetch("".concat(("TURBOPACK compile-time value", "https://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/project_conf"));
                         const data = await res.json();
                         if (data === null || data === void 0 ? void 0 : (_data_data = data.data) === null || _data_data === void 0 ? void 0 : _data_data.mediaflow) setMediaflow(data.data.mediaflow);
                     } catch (error) {}
@@ -585,7 +585,7 @@ function UploadReel() {
             formDataToSend.append("file_media_2", finalVideoFile, finalVideoFile.name);
         }
         try {
-            const response = await fetch("".concat(("TURBOPACK compile-time value", "http://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/social/upload-social"), {
+            const response = await fetch("".concat(("TURBOPACK compile-time value", "https://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/social/upload-social"), {
                 method: "POST",
                 body: formDataToSend,
                 headers: {
@@ -953,7 +953,7 @@ var _s = __turbopack_context__.k.signature();
 async function fetchMusic(param) {
     let { pageParam } = param;
     const token = __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get("Reelboost_auth_token");
-    const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("".concat(("TURBOPACK compile-time value", "http://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/music/get-music"), {
+    const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$Rx$2f$__Technology$2f$Repository$2f$lakaw$2d$socmed$2d$Website$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("".concat(("TURBOPACK compile-time value", "https://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/music/get-music"), {
         page: pageParam
     }, {
         headers: {

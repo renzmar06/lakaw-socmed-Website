@@ -61,7 +61,7 @@ function EditProfile() {
                 "EditProfile.useEffect.fetchConfig": async ()=>{
                     try {
                         var _data_data;
-                        const res = await fetch("".concat(("TURBOPACK compile-time value", "http://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/project_conf"));
+                        const res = await fetch("".concat(("TURBOPACK compile-time value", "https://ec2-3-26-224-23.ap-southeast-2.compute.amazonaws.com/api"), "/project_conf"));
                         const data = await res.json();
                         if (data === null || data === void 0 ? void 0 : (_data_data = data.data) === null || _data_data === void 0 ? void 0 : _data_data.mediaflow) {
                             setMediaflow(data.data.mediaflow);
