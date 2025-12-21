@@ -1,1 +1,191 @@
-{"version":3,"caseSensitive":false,"basePath":"","rewrites":{"beforeFiles":[],"afterFiles":[],"fallback":[]},"redirects":[{"source":"/:path+/","destination":"/:path+","permanent":true,"internal":true,"regex":"^(?:\\/((?:[^\\/]+?)(?:\\/(?:[^\\/]+?))*))\\/$"}],"headers":[]}
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/profile/[id]",
+      "regex": "^/profile/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/profile/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/booknow",
+      "regex": "^/booknow(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/booknow(?:/)?$"
+    },
+    {
+      "page": "/explore",
+      "regex": "^/explore(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/explore(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/following",
+      "regex": "^/following(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/following(?:/)?$"
+    },
+    {
+      "page": "/home",
+      "regex": "^/home(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/home(?:/)?$"
+    },
+    {
+      "page": "/live",
+      "regex": "^/live(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/live(?:/)?$"
+    },
+    {
+      "page": "/message",
+      "regex": "^/message(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/message(?:/)?$"
+    },
+    {
+      "page": "/music",
+      "regex": "^/music(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/music(?:/)?$"
+    },
+    {
+      "page": "/not-found",
+      "regex": "^/not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/not\\-found(?:/)?$"
+    },
+    {
+      "page": "/profile",
+      "regex": "^/profile(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/profile(?:/)?$"
+    },
+    {
+      "page": "/setting",
+      "regex": "^/setting(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/setting(?:/)?$"
+    },
+    {
+      "page": "/setting/bank-details",
+      "regex": "^/setting/bank\\-details(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/setting/bank\\-details(?:/)?$"
+    },
+    {
+      "page": "/setting/blocked-list",
+      "regex": "^/setting/blocked\\-list(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/setting/blocked\\-list(?:/)?$"
+    },
+    {
+      "page": "/setting/coin-history",
+      "regex": "^/setting/coin\\-history(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/setting/coin\\-history(?:/)?$"
+    },
+    {
+      "page": "/setting/payment-history",
+      "regex": "^/setting/payment\\-history(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/setting/payment\\-history(?:/)?$"
+    },
+    {
+      "page": "/setting/privacy-policy",
+      "regex": "^/setting/privacy\\-policy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/setting/privacy\\-policy(?:/)?$"
+    },
+    {
+      "page": "/setting/recharge",
+      "regex": "^/setting/recharge(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/setting/recharge(?:/)?$"
+    },
+    {
+      "page": "/setting/saved-bookmark",
+      "regex": "^/setting/saved\\-bookmark(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/setting/saved\\-bookmark(?:/)?$"
+    },
+    {
+      "page": "/setting/terms&conditions",
+      "regex": "^/setting/terms&conditions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/setting/terms&conditions(?:/)?$"
+    },
+    {
+      "page": "/setting/wallet",
+      "regex": "^/setting/wallet(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/setting/wallet(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

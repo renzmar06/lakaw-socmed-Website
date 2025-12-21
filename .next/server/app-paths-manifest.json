@@ -1,5 +1,26 @@
 {
+  "/_global-error/page": "app/_global-error/page.js",
   "/_not-found/page": "app/_not-found/page.js",
+  "/booknow/page": "app/booknow/page.js",
+  "/explore/page": "app/explore/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/page": "app/page.js"
+  "/following/page": "app/following/page.js",
+  "/home/page": "app/home/page.js",
+  "/live/page": "app/live/page.js",
+  "/message/page": "app/message/page.js",
+  "/music/page": "app/music/page.js",
+  "/not-found/page": "app/not-found/page.js",
+  "/page": "app/page.js",
+  "/profile/[id]/page": "app/profile/[id]/page.js",
+  "/profile/page": "app/profile/page.js",
+  "/setting/bank-details/page": "app/setting/bank-details/page.js",
+  "/setting/blocked-list/page": "app/setting/blocked-list/page.js",
+  "/setting/coin-history/page": "app/setting/coin-history/page.js",
+  "/setting/page": "app/setting/page.js",
+  "/setting/payment-history/page": "app/setting/payment-history/page.js",
+  "/setting/privacy-policy/page": "app/setting/privacy-policy/page.js",
+  "/setting/recharge/page": "app/setting/recharge/page.js",
+  "/setting/saved-bookmark/page": "app/setting/saved-bookmark/page.js",
+  "/setting/terms&conditions/page": "app/setting/terms&conditions/page.js",
+  "/setting/wallet/page": "app/setting/wallet/page.js"
 }
