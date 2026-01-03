@@ -220,7 +220,7 @@ function ActionButtons({ reel, setReels, user_id }: ActionButtonsProps) {
   // }, [ReelSharedId, reel.social_id, dispatch]);
 
   return (
-    <div className="flex flex-col gap-5 place-items-center translate-y-[200px]">
+    <div className="flex flex-col gap-4 place-items-center translate-y-[200px]">
       {/* Music Icon */}
       {reel.Music != null && (
         <div
@@ -255,7 +255,7 @@ function ActionButtons({ reel, setReels, user_id }: ActionButtonsProps) {
         className="flex flex-col gap-1.5 cursor-pointer place-items-center"
         onClick={handleLike}
       >
-        <div className="rounded-full sm:bg-dark/[0.04] bg-primary/[0.4] p-2">
+        <div className="rounded-full p-2">
           <Image
             src={
               reel.isLiked === true
@@ -265,9 +265,10 @@ function ActionButtons({ reel, setReels, user_id }: ActionButtonsProps) {
             alt="like"
             width={25}
             height={25}
+            className="brightness-0 invert"
           />
         </div>
-        <p className="text-xs text-dark">{reel.total_likes}</p>
+        <p className="text-xs text-white">{reel.total_likes}</p>
       </button>
 
       {/* Comment */}
@@ -277,20 +278,21 @@ function ActionButtons({ reel, setReels, user_id }: ActionButtonsProps) {
           onClick={handleComment}
           className="flex flex-col gap-1.5 cursor-pointer place-items-center"
         >
-          <div className="rounded-full sm:bg-dark/[0.04] bg-primary/[0.4] p-2">
+          <div className="rounded-full p-2">
             <Image
               src="/home/comment.png"
               alt="comment"
               width={24}
               height={24}
+              className="brightness-0 invert"
             />
           </div>
           {commentAdded ? (
-            <p className="text-xs text-dark">
+            <p className="text-xs text-white">
               {reel?.total_comments + 1}
             </p>
           ) : (
-            <p className="text-xs text-dark">{reel.total_comments}</p>
+            <p className="text-xs text-white">{reel.total_comments}</p>
           )}
         </button>
 
@@ -306,11 +308,11 @@ function ActionButtons({ reel, setReels, user_id }: ActionButtonsProps) {
         onClick={handleShare}
         className="flex flex-col gap-1.5 cursor-pointer place-items-center"
       >
-        <div className="rounded-full sm:bg-dark/[0.04] bg-primary/[0.4] p-2">
-          <Image src="/home/share.png" alt="share" width={24} height={24} />
+        <div className="rounded-full p-2">
+          <Image src="/home/share.png" alt="share" width={24} height={24} className="brightness-0 invert"/>
         </div>
         {ReelSharedId === reel.social_id ? ( <p className="text-xs text-dark">{reel.total_shares + 1}</p> ) : (
-          <p className="text-xs text-dark">{reel.total_shares}</p>
+          <p className="text-xs text-white">{reel.total_shares}</p>
         )}
       </button>
 
@@ -319,7 +321,7 @@ function ActionButtons({ reel, setReels, user_id }: ActionButtonsProps) {
         className="flex flex-col gap-1.5 cursor-pointer place-items-center"
         onClick={handleBookmark}
       >
-        <div className="rounded-full sm:bg-dark/[0.04] bg-primary/[0.4] p-2">
+        <div className="rounded-full p-2">
           <Image
             src={
               reel.isSaved === true
@@ -329,15 +331,16 @@ function ActionButtons({ reel, setReels, user_id }: ActionButtonsProps) {
             alt="bookmark"
             width={23}
             height={23}
+            className="brightness-0 invert"
           />
         </div>
-        <p className="text-xs text-dark">{reel.total_saves}</p>
+        <p className="text-xs text-white">{reel.total_saves}</p>
       </button>
 
       {/* Delete Reel */}
       {reel.User.user_id == Number(MyUserId) && (
         <button onClick={() => dispatch(showModal("DeleteSocial"))}>
-          <BsThreeDots className="text-dark" />
+          <BsThreeDots className="text-white" />
         </button>
       )}
 
@@ -364,8 +367,8 @@ function ActionButtons({ reel, setReels, user_id }: ActionButtonsProps) {
             onClick={handleMyGift}
             className="flex flex-col gap-1.5 cursor-pointer place-items-center"
           >
-            <div className="rounded-full sm:bg-dark/[0.04] bg-primary/[0.4] p-2">
-              <Image src="/gift/eye.png" alt="share" width={24} height={24} />
+            <div className="rounded-full p-2">
+              <Image src="/gift/eye.png" alt="share" width={24} height={24} className="brightness-0 invert" />
             </div>
           </button>
         </>
