@@ -167,6 +167,7 @@ function NotificationPopup() {
                             height={40}
                             alt="profile"
                             className="rounded-full"
+                            unoptimized
                           />
                         )}
 
@@ -253,6 +254,7 @@ function NotificationPopup() {
                         height={40}
                         alt="profile"
                         className="rounded-full"
+                        unoptimized
                       />
                     )}
 

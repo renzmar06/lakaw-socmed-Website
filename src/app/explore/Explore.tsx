@@ -193,6 +193,7 @@ function Explore() {
                         alt={reel.User.user_name}
                         width={50}
                         height={50}
+                        unoptimized
                       />
                     </div>
                     <p className="text-dark text-[12px]">{reel.User.user_name}</p>

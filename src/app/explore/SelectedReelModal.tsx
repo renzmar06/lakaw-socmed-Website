@@ -266,6 +266,7 @@ const ReelDetailsModal = ({ setReels }: ReelDetailsModalProps) => {
                   width={40}
                   height={40}
                   className="rounded-full"
+                  unoptimized
                 />
                 <h2 className="text-base font-medium text-dark">
                   {reel?.User?.user_name}

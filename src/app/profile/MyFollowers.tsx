@@ -210,6 +210,7 @@ function MyFollowers({ userId }: MyFollowersProps) {
                             alt={user.user_name}
                             height={40}
                             width={40}
+                            unoptimized
                           />
                         </div>
                         <div className="flex flex-col">

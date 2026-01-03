@@ -108,6 +108,7 @@ function SuggestedAccounts() {
                   className="w-full h-full object-cover rounded-full"
                   width={60}
                   height={60}
+                  unoptimized
                 />
               </div>
               <div className="flex flex-col">

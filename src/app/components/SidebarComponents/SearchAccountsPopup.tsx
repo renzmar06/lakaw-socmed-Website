@@ -259,6 +259,7 @@ useEffect(() => {
                         className="w-full h-full object-cover"
                         width={60}
                         height={60}
+                        unoptimized
                       />
                     </div>
                     <div className="flex flex-col">

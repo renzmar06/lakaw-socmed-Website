@@ -127,3 +127,37 @@ body {
 .pac-container {
   z-index: 9999 !important;
 }
+
+.top-padding17{
+  padding-top: calc(var(--spacing) * 17);
+}
+
+.max-width90{
+  width: 90%!important;
+}
+
+.lab-61{
+  border-color: lab(61 0.01 0);
+}
+
+.mb-20{
+  margin-bottom: 20px!important;
+}
+
+.mt-10{
+  margin-top: 10px!important;
+}
+.text-green{
+  color: #1a9d773!important;
+}
+.tp-75{
+  padding-top: 75px!important;
+}
+.input-center {
+  text-align: center;       /* horizontal centering */
+  display: flex;
+  align-items: center;      /* vertical centering */
+  justify-content: center;  /* horizontal centering inside flex */
+  background-color: #ffffff; /* white background */
+  cursor: default;          /* indicate read-only */
+}

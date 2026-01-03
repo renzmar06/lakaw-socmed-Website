@@ -5,7 +5,7 @@ import "react-phone-input-2/lib/high-res.css";
 import PhoneInput from "react-phone-input-2";
 import { hideModal, showModal } from "../store/Slice/ModalsSlice";
 import { toast } from "react-toastify";
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import IconInput from "../components/SignupField";
 import { FindUserRes, UpdateUserRes } from "../types/ResTypes";
 import useApiPost from "../hooks/postData";
@@ -126,28 +126,48 @@ const validateSignup = () => {
   // ✅ Updated handleSignup to include token
   const handleSignup = async () => {
     if(!validateSignup()) return;
+      try {
+          const res = await fetch(`https://golakaw.com/api/register`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ first_name: formData.first_name, last_name: formData.last_name,
+              username: formData.user_name, email: formData.email, password:"lakaw123!!"
+            }),
+          });
+          const data = await res.json();
+          if (data.status === "success") {
+            try {
+              const response: UpdateUserRes = await postData("/users/updateUser", {
+                user_name: formData.user_name,
+                first_name: formData.first_name,
+                last_name: formData.last_name,
+                mobile_num: phone,
+                country: country,
+                bio: formData.bio,
+                email: formData.email,
+              });
 
-    try {
-      const response: UpdateUserRes = await postData("/users/updateUser", {
-        user_name: formData.user_name,
-        first_name: formData.first_name,
-        last_name: formData.last_name,
-        mobile_num: phone,
-        country: country,
-        bio: formData.bio,
-        email: formData.email,
-      });
-
-      if (response.status === false) {
-        toast.error(response.message);
-      } else {
-        toast.success("Signed up successfully!");
-        dispatch(hideModal("Signup"));
-        dispatch(showModal("Avtar"));
+              if (response.status === false) {
+                toast.error(response.message);
+              } else {
+                
+                    toast.success("Signed up successfully!");
+                    dispatch(hideModal("Signup"));
+                    dispatch(showModal("Avtar"));
+              }
+            } catch (error) {
+              toast.error("Signup failed. Please try again.");
+            }
+          } else {
+            toast.error("Signup failed. Please try again.");
+          }
+      } catch (err) {
+          toast.error("Signup failed. Please try again.");
       }
-    } catch (error) {
-      toast.error("Signup failed. Please try again.");
-    }
+
+    
   };
 
   const [usernameVerified, setUsernameVerified] = useState(false);

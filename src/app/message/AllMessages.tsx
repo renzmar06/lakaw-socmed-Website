@@ -169,6 +169,7 @@ export default function AllMessages() {
                           height={20}
                           className="rounded-full"
                           alt="avatar"
+                          unoptimized
                         />
                       )}
 
@@ -395,6 +396,7 @@ export default function AllMessages() {
                                 className="w-6 h-6 rounded-full"
                                 width={80}
                                 height={80}
+                                unoptimized
                               />
                               <p className="text-primary text-sm font-gilroy_semibold inline-block drop-shadow-[0_1px_2px_rgba(0,0,0,3)]">
                                 {msg.User.user_name}
@@ -454,6 +456,7 @@ export default function AllMessages() {
                           height={20}
                           className="rounded-full"
                           alt="avatar"
+                          unoptimized
                         />
                       )}
                     </div>

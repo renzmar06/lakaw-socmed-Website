@@ -279,6 +279,7 @@ function MyFollowing() {
                             alt={user.user_name}
                             width={60}
                             height={60}
+                            unoptimized
                           />
                         </div>
                         <div className="flex flex-col">

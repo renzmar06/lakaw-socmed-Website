@@ -90,7 +90,7 @@ function WalletHeader() {
                 height={16}
               />
               <p className="text-dark sm:text-[13px] text-xs font-medium ">
-                Note: 1 coin = $ {dollarPerCoin}
+                Note: 1 coin = ₱ {dollarPerCoin}
               </p>
             </div>
           </div>

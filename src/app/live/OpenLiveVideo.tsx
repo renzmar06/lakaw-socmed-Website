@@ -107,6 +107,7 @@ const peerId = usePeerId();
                   width={50}
                   height={50}
                   className="w-8 h-8 rounded-full"
+                  unoptimized
                 />
               </div>
               <p className="text-sm text-primary inline-block drop-shadow-[0_1px_2px_rgba(0,0,0,3)]">

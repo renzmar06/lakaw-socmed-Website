@@ -42,6 +42,7 @@ const UserItem: React.FC<UserItemProps> = ({
             width={48}
             height={48}
             className="w-[44px] h-[44px] rounded-full object-cover"
+            unoptimized
           />
 
           {isOnline && (

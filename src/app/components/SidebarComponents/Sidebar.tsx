@@ -109,9 +109,9 @@ function Sidebar({ onNavigate }: SidebarProps) {
     },
       {
 
-        name:"Book Now ",
+        name:"Tours",
         src:"/SidebarIcons/booknow1.png",
-        src1:"/SidebarIcons/booknow.png",
+        src1:"/SidebarIcons/booknow1.png",
         route:"/booknow",
       },
     {
@@ -143,7 +143,7 @@ function Sidebar({ onNavigate }: SidebarProps) {
                   "Following",
                   "Live",
                   "Profile",
-                  "Book Now ",
+                  "Tours",
                   "Setting",
                 ].includes(option.name)
               )

@@ -208,6 +208,7 @@ function ProfileHeader({ userId, isMyProfile = false }: ProfileHeaderProps) {
               fill
               className="object-cover rounded-full"
               sizes="(max-width: 640px) 96px, 160px"
+              unoptimized
             />
           </div>
         )}

@@ -63,6 +63,7 @@ function ChatHeader({ onBack }: ChatHeaderProps) {
           className="w-9 h-9 rounded-full object-cover"
           height={100}
           width={100}
+          unoptimized
         />
 
         <div className="ml-2 flex flex-col">

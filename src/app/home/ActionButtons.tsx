@@ -352,6 +352,7 @@ function ActionButtons({ reel, setReels, user_id }: ActionButtonsProps) {
             alt="profile"
             height={30}
             width={30}
+            unoptimized
           />
         </div>
       </button>

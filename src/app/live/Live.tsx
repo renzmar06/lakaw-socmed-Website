@@ -105,6 +105,7 @@ function Live() {
                     width={32}
                     height={32}
                     className="object-cover w-full h-full"
+                    unoptimized
                   />
                 </div>
                 <p className="text-sm font-semibold text-primary px-2 py-0.5 rounded-lg">

@@ -51,6 +51,7 @@ export default function SettingSidebar({
               height={128}
               alt="profile"
               className="object-cover w-full h-full"
+              unoptimized
             />
           </div>
           <p

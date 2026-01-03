@@ -105,6 +105,7 @@ export default function CommentItem({ record }: Props) {
             alt="profile"
             width={40}
             height={40}
+            unoptimized
           />
         </div>
 
@@ -185,6 +186,7 @@ export default function CommentItem({ record }: Props) {
                   alt="profile"
                   width={30}
                   height={30}
+                  unoptimized
                 />
               </div>
               <div className="flex-1">

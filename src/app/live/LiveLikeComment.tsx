@@ -153,6 +153,7 @@ function LiveLikeComment() {
                 width={28}
                 height={28}
                 className="rounded-full"
+                unoptimized
               />
               <div className="flex flex-col text-primary">
                 <span className="text-sm font-semibold drop-shadow-[0_1px_2px_rgba(0,0,0,3)]">
@@ -180,6 +181,7 @@ function LiveLikeComment() {
           width={25}
           height={25}
           className="w-8 h-8 object-cover"
+          unoptimized
         />
         <div className="bg-primary/[0.4] w-full flex place-items-center rounded-full relative">
           <input

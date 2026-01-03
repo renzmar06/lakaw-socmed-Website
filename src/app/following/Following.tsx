@@ -173,6 +173,7 @@ function Following() {
                     alt="profile"
                     width={20}
                     height={20}
+                    unoptimized
                   />
                   <h2 className="text-sm font-medium text-primary drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
                     {user.user_name.replace(" ", "").toLowerCase()}

@@ -1,6 +1,7 @@
 {
   "/_global-error/page": "app/_global-error/page.js",
   "/_not-found/page": "app/_not-found/page.js",
+  "/booking/page": "app/booking/page.js",
   "/booknow/page": "app/booknow/page.js",
   "/explore/page": "app/explore/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
@@ -22,5 +23,6 @@
   "/setting/recharge/page": "app/setting/recharge/page.js",
   "/setting/saved-bookmark/page": "app/setting/saved-bookmark/page.js",
   "/setting/terms&conditions/page": "app/setting/terms&conditions/page.js",
-  "/setting/wallet/page": "app/setting/wallet/page.js"
+  "/setting/wallet/page": "app/setting/wallet/page.js",
+  "/tourdetails/page": "app/tourdetails/page.js"
 }

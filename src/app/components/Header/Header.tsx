@@ -1,6 +1,7 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { toast } from "react-toastify";
 import Logo from "../../../../public/ReelBoost/ReelBoostLogo.png";
 import ReelBoost from "../../../../public/ReelBoost/ReelBoost.png";
 import { HiPlus } from "react-icons/hi";
@@ -18,6 +19,9 @@ import { updateNotificationStatus } from "@/app/store/api/updateNotificationStat
 function Header() {
   const dispatch = useAppDispatch();
   const token = Cookies.get("Reelboost_auth_token");
+
+  // Balance state
+  const [balance, setBalance] = useState<number | null>(null);
 
   // fetch notifications for seen unseen =========
   const { data } = useNotifications(10);
@@ -42,6 +46,59 @@ function Header() {
   const open = useAppSelector((state) => state.modals.LogoutProfile);
   const openNotification = useAppSelector((state) => state.modals.Notification);
 
+  // Fetch FiliPay balance
+  useEffect(() => {
+    const fetchBalance = async () => {
+      if (!userData?.data?.user_id) return;
+      
+      try {
+        const res = await fetch(`https://golakaw.com/api/login`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ login: userData.data.email, password: "lakaw123!!!" }), // non-standard for GET
+        });
+        const logindata = await res.json();
+        if (logindata.status === "success") {
+              const res2 = await fetch(`https://golakaw.com/api/postFilipayBalance`, {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ customer_id: logindata.data.id }), // non-standard for GET
+              });
+              const data = await res2.json();
+              if (data.status === "success") {
+                setBalance(data.data.balance); // assuming API returns { status: 'success', balance: 1234 }
+              } else {
+                toast.error("Failed to fetch balance");
+              }
+        }
+        // } else {
+        //   const res3 = await fetch(`https://golakaw.com/api/register`, {
+        //     method: "POST",
+        //     headers: {
+        //       "Content-Type": "application/json",
+        //     },
+        //     body: JSON.stringify({ first_name: userData.data.first_name, last_name: userData.data.last_name,
+        //       username: userData.data.user_name, email: userData.data.email, password:"lakaw123!!"
+        //     }),
+        //   });
+        //   const regdata = await res3.json();
+        //   if (regdata.status === "success") {
+        //     fetchBalance(); 
+        //   }else{
+        //     toast.error("Error fetching balance");
+        //   }
+        // }
+      } catch (err) {
+         toast.error("Error fetching balance");
+      }
+    };
+
+    fetchBalance();
+  }, [userData?.data?.user_id]);
   return (
     <>
       <div
@@ -91,6 +148,11 @@ function Header() {
                 (token && (
                   <>
                     <div className="flex gap-2 place-items-center cursor-pointer">
+                      {balance !== null && (
+                       <div className="flex text-xs sm:text-sm font-medium text-white bg-green-600 px-2 sm:px-3 py-1 rounded-xl truncate">
+                          FiliPay Balance: ₱ {Number(balance).toFixed(2)}
+                        </div>
+                      )}
                       {/* Search */}
                       <div
                         className="cursor-pointer rounded-full background-opacityGradient w-8 h-8 flex items-center justify-center"
@@ -166,11 +228,12 @@ function Header() {
                             onClick={() => dispatch(showModal("LogoutProfile"))}
                           >
                             <Image
-                              src={userData?.data.profile_pic || ""}
+                              src={userData?.data.profile_pic || "/profile/verified.png"}
                               className="w-full h-full object-cover rounded-full"
                               alt="profile"
                               width={25}
                               height={25}
+                              unoptimized
                             />
                             {open && (
                               <div className="absolute -right-5 top-13">

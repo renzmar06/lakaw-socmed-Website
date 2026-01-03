@@ -139,6 +139,7 @@ function MusicReels() {
                         alt={reel.User.user_name}
                         width={22}
                         height={22}
+                        unoptimized
                       />
                       <p className="text-dark text-[12px]">
                         {reel.User.user_name}

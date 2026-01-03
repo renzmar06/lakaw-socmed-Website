@@ -84,6 +84,7 @@ function LatestGiftSender() {
                   width={45}
                   height={45}
                   className="rounded-full"
+                  unoptimized
                 />
                 <p className="text-xs text-dark truncate w-14 text-center">
                   {sender.user_name}

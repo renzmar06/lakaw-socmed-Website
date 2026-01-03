@@ -97,6 +97,7 @@ export default function BlockedListPage() {
                     className="h-12 w-12 object-cover rounded-full"
                     width={48}
                     height={48}
+                    unoptimized
                   />
                   <div>
                     <h2 className="font-semibold text-sm text-dark">

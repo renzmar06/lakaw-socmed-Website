@@ -50,6 +50,12 @@
       "namedRegex": "^/_not\\-found(?:/)?$"
     },
     {
+      "page": "/booking",
+      "regex": "^/booking(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/booking(?:/)?$"
+    },
+    {
       "page": "/booknow",
       "regex": "^/booknow(?:/)?$",
       "routeKeys": {},
@@ -168,6 +174,12 @@
       "regex": "^/setting/wallet(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/setting/wallet(?:/)?$"
+    },
+    {
+      "page": "/tourdetails",
+      "regex": "^/tourdetails(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tourdetails(?:/)?$"
     }
   ],
   "dataRoutes": [],

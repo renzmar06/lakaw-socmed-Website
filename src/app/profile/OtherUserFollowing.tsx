@@ -210,6 +210,7 @@ function OtherUserFollowing() {
                             alt={user?.user_name}
                             width={60}
                             height={60}
+                            unoptimized
                           />
                         </div>
 
