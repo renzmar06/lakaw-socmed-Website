@@ -150,7 +150,7 @@ function Header() {
                     <div className="flex gap-2 place-items-center cursor-pointer">
                       {balance !== null && (
                        <div className="flex text-xs sm:text-sm font-medium text-white bg-green-600 px-2 sm:px-3 py-1 rounded-xl truncate">
-                          FiliPay Balance: ₱ {Number(balance).toFixed(2)}
+                          FP: ₱ {Number(balance).toFixed(2)}
                         </div>
                       )}
                       {/* Search */}
