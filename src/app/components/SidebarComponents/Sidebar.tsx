@@ -79,20 +79,20 @@ function Sidebar({ onNavigate }: SidebarProps) {
   const options = [
     {
       name: "For You",
-      src: "/SidebarIcons/home.png",
-      src1: "/SidebarIcons/home1.png",
+      src: "/SidebarIcons/home0.png",
+      src1: "/SidebarIcons/home0.png",
       route: "/",
     },
     {
       name: "Explore",
-      src: "/SidebarIcons/explore.png",
-      src1: "/SidebarIcons/explore1.png",
+      src: "/SidebarIcons/explore0.png",
+      src1: "/SidebarIcons/explore0.png",
       route: "/explore",
     },
     {
       name: "Following",
-      src: "/SidebarIcons/Following.png",
-      src1: "/SidebarIcons/Following1.png",
+      src: "/SidebarIcons/Following0.png",
+      src1: "/SidebarIcons/Following0.png",
       route: "/following",
     },
     // {
@@ -102,18 +102,17 @@ function Sidebar({ onNavigate }: SidebarProps) {
     //   route: "/live",
     // },
     {
+        name:"Tours",
+        src:"/SidebarIcons/location.png",
+        src1:"/SidebarIcons/location.png",
+        route:"/booknow",
+    },
+    {
       name: "Profile",
-      src: "/SidebarIcons/profile.png",
-      src1: "/SidebarIcons/profile1.png",
+      src: "/SidebarIcons/profile0.png",
+      src1: "/SidebarIcons/profile0.png",
       route: "/profile",
     },
-      {
-
-        name:"Tours",
-        src:"/SidebarIcons/booknow1.png",
-        src1:"/SidebarIcons/booknow1.png",
-        route:"/booknow",
-      },
     {
       name: "Reels",
       src: "/SidebarIcons/reels.png",
@@ -142,8 +141,8 @@ function Sidebar({ onNavigate }: SidebarProps) {
                   "Explore",
                   "Following",
                   "Live",
-                  "Profile",
                   "Tours",
+                  "Profile",
                   "Setting",
                 ].includes(option.name)
               )
@@ -228,7 +227,7 @@ function Sidebar({ onNavigate }: SidebarProps) {
           <div className="flex justify-around items-center py-2">
             {options
               .filter((opt) =>
-                ["For You", "Explore", "Following", "Live", "Profile"].includes(
+                ["For You", "Explore", "Following", "Tours", "Profile"].includes(
                   opt.name
                 )
               )

@@ -295,11 +295,11 @@ function Home() {
               data-index={index}
               className="relative h-screen snap-start flex justify-center gap-4 items-center"
             >
-              <div className="relative w-full h-screen rounded-lg overflow-hidden bg-dark md:max-w-lg">
+              <div className="relative w-screen h-[100svh] bg-black overflow-hidden md:max-w-lg md:h-screen md:rounded-lg md:mx-auto">
                 {/* 🎥 Video */}
                 <video
                   src={reel?.Media[0]?.media_location}
-                  className="w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover"
                   loop
                   playsInline
                   onClick={(e) => {

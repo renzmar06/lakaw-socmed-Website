@@ -148,14 +148,32 @@ function Header() {
                 (token && (
                   <>
                     <div className="flex gap-2 place-items-center cursor-pointer">
-                      {balance !== null && (
-                       <div className="flex text-xs sm:text-sm font-medium text-white bg-green-600 px-2 sm:px-3 py-1 rounded-xl truncate">
-                          FP: ₱ {Number(balance).toFixed(2)}
+                     {balance !== null && (
+                        <div className="flex items-center gap-2 text-black">
+                          <Image src="/home/filipay.png" width={14} height={14} alt="" />
+                          <span className="text-sm font-medium">
+                            {Number(balance).toLocaleString("en-PH", {
+                              minimumFractionDigits: 2,
+                              maximumFractionDigits: 2,
+                            })}
+                          </span>
                         </div>
                       )}
+                      {/* BookNow */}
+                      {/* <div
+                        className="cursor-pointer rounded-full w-8 h-8 flex items-center justify-center"
+                        onClick={() => router.push("/booknow")}
+                      >
+                        <Image
+                          src="/home/Location.png"
+                          alt="notification"
+                          width={18}
+                          height={18}
+                        />
+                      </div> */}
                       {/* Search */}
                       <div
-                        className="cursor-pointer rounded-full background-opacityGradient w-8 h-8 flex items-center justify-center"
+                        className="cursor-pointer rounded-full w-8 h-8 flex items-center justify-center"
                         onClick={() => dispatch(showModal("MainSearch"))}
                       >
                         <Image
@@ -168,7 +186,7 @@ function Header() {
 
                       {/* Chat */}
                       <div
-                        className="cursor-pointer rounded-full background-opacityGradient w-8 h-8 flex items-center justify-center"
+                        className="cursor-pointer rounded-full w-8 h-8 flex items-center justify-center"
                         onClick={() => router.push("/message")}
                       >
                         <Image
@@ -181,7 +199,7 @@ function Header() {
 
                       {/* Notification */}
                       <div
-                        className="cursor-pointer relative rounded-full background-opacityGradient w-8 h-8 flex items-center justify-center"
+                        className="cursor-pointer relative rounded-full w-8 h-8 flex items-center justify-center"
                         onClick={async () => {
                           if (hasUnseen) {
                             const unseenIds = notifications

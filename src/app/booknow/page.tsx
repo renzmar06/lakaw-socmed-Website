@@ -131,15 +131,15 @@ export default function Tours() {
       {/* Filters */}
       <div className="top-padding17 sticky top-0 z-20 bg-white border-b border-slate-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-            <div className="relative flex-1 max-w-md w-full bg-white border border-slate-200 rounded-xl shadow-sm flex items-center px-4 h-12 focus-within:ring-2 focus-within:ring-orange-500 focus-within:border-orange-500 transition">
+          <div className="grid grid-cols-1 gap-3 md:flex md:items-center md:justify-between md:gap-4">
+            <div className="relative w-full md:max-w-md bg-white border border-slate-200 rounded-xl shadow-sm flex items-center px-4 h-12 focus-within:ring-2 focus-within:ring-orange-500">
               <Search className="w-5 h-5 text-slate-400 mr-3" />
               <input
                 type="text"
                 placeholder="Search destinations, tours..."
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}
-                className="flex-1 outline-none text-slate-900 placeholder-slate-400"
+                className="flex-1 outline-none text-slate-900 placeholder-slate-400 bg-transparent"
               />
               {searchQuery && (
                 <button onClick={() => setSearchQuery("")} className="ml-3">
@@ -149,7 +149,7 @@ export default function Tours() {
             </div>
 
 
-            <div className="flex items-center gap-3 w-full md:w-auto flex-wrap">
+            <div className="grid grid-cols-2 gap-3 md:flex md:gap-3 md:w-auto">
               {/* Destination Select */}
               <Select value={filterDestination} onValueChange={setFilterDestination}>
                 {({ open, setOpen }) => (
@@ -157,7 +157,7 @@ export default function Tours() {
                     <SelectTrigger
                       open={open}
                       setOpen={setOpen}
-                      className="lab-61 text-slate-900 w-full md:w-48 h-12 border-slate-200 rounded-xl flex justify-between items-center px-4"
+                      className="w-full md:w-48 h-12 border-slate-200 rounded-xl flex justify-between items-center px-4 text-slate-900"
                     >
                       <SelectValue placeholder="Destination" />
                       <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
@@ -171,9 +171,7 @@ export default function Tours() {
                   </>
                 )}
               </Select>
-            </div>
 
-            <div className="flex items-center gap-3 w-full md:w-auto flex-wrap">
               {/* Price Select */}
               <Select value={filterPrice} onValueChange={setFilterPrice}>
                 {({ open, setOpen }) => (
@@ -181,7 +179,7 @@ export default function Tours() {
                     <SelectTrigger
                       open={open}
                       setOpen={setOpen}
-                      className="lab-61 text-slate-900 w-full md:w-48 h-12 border-slate-200 rounded-xl flex justify-between items-center px-4"
+                      className="w-full md:w-48 h-12 border-slate-200 rounded-xl flex justify-between items-center px-4 text-slate-900"
                     >
                       <SelectValue placeholder="Price Range" />
                       <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
@@ -198,7 +196,7 @@ export default function Tours() {
               </Select>
             </div>
 
-            <div className="flex items-center gap-3 w-full md:w-auto flex-wrap">
+            <div className="grid grid-cols-2 gap-3 md:flex md:gap-3 md:w-auto">
               {/* Duration Select */}
               <Select value={filterDuration} onValueChange={setFilterDuration}>
                 {({ open, setOpen }) => (
@@ -206,7 +204,7 @@ export default function Tours() {
                     <SelectTrigger
                       open={open}
                       setOpen={setOpen}
-                      className="lab-61 text-slate-900 w-full md:w-48 h-12 border-slate-200 rounded-xl flex justify-between items-center px-4"
+                      className="w-full md:w-48 h-12 border-slate-200 rounded-xl flex justify-between items-center px-4 text-slate-900"
                     >
                       <SelectValue placeholder="Duration" />
                       <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
@@ -220,9 +218,7 @@ export default function Tours() {
                   </>
                 )}
               </Select>
-            </div>
-
-            <div className="flex items-center gap-3 w-full md:w-auto flex-wrap">
+              
               {/* Sort Select */}
               <Select value={sortBy} onValueChange={setSortBy}>
                 {({ open, setOpen }) => (
@@ -230,7 +226,7 @@ export default function Tours() {
                     <SelectTrigger
                       open={open}
                       setOpen={setOpen}
-                      className="lab-61 text-slate-900 w-full md:w-48 h-12 border-slate-200 rounded-xl flex justify-between items-center px-4"
+                      className="w-full md:w-48 h-12 border-slate-200 rounded-xl flex justify-between items-center px-4 text-slate-900"
                     >
                       <SelectValue placeholder="Sort by" />
                       <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
@@ -261,13 +257,13 @@ export default function Tours() {
       </div>
 
       {/* Tours Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
         {loading ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {[...Array(6)].map((_, i) => (
               <div key={i} className="bg-white rounded-2xl overflow-hidden">
                 <Skeleton className="aspect-[4/3] w-full" />
-                <div className="p-5 space-y-3">
+                <div className="p-4 sm:p-5 space-y-3">
                   <Skeleton className="h-6 w-3/4" />
                   <Skeleton className="h-4 w-1/2" />
                   <Skeleton className="h-8 w-1/3" />
@@ -277,27 +273,27 @@ export default function Tours() {
           </div>
         ) : sortedTours.length > 0 ? (
           <AnimatePresence mode="wait">
-            <motion.div key={`${currentPage}-${searchQuery}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <motion.div key={`${currentPage}-${searchQuery}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {sortedTours.map((tour, index) => (
                 <TourCard key={tour.id} tour={tour} index={index} />
               ))}
             </motion.div>
           </AnimatePresence>
         ) : (
-          <div className="text-center py-20">
-            <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-slate-100 flex items-center justify-center">
-              <Search className="w-10 h-10 text-slate-400" />
+          <div className="text-center py-16 sm:py-20 px-4">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6 rounded-full bg-slate-100 flex items-center justify-center">
+              <Search className="w-8 h-8 sm:w-10 sm:h-10 text-slate-400" />
             </div>
-            <h3 className="text-xl font-semibold text-slate-800 mb-2">No tours found</h3>
-            <p className="text-slate-500 mb-6">Try adjusting your search or filters</p>
+            <h3 className="text-lg sm:text-xl font-semibold text-slate-800 mb-2">No tours found</h3>
+            <p className="text-slate-500 mb-6 text-sm sm:text-base">Try adjusting your search or filters</p>
             <Button onClick={() => setSearchQuery("")} variant="outlined">Clear Search</Button>
           </div>
         )}
 
         {/* Pagination */}
         {totalPages > 1 && (
-          <div className="flex items-center justify-center gap-2 mt-12">
-            <Button variant="outlined" size="small" onClick={() => setCurrentPage(p => Math.max(1, p - 1))} disabled={currentPage === 1} className="rounded-xl">
+          <div className="flex flex-wrap items-center justify-center gap-2 mt-10 sm:mt-12 px-2">
+            <Button variant="outlined" size="small" onClick={() => setCurrentPage(p => Math.max(1, p - 1))} disabled={currentPage === 1} className="rounded-xl min-w-[40px] h-10">
               <ChevronLeft className="w-5 h-5" />
             </Button>
 
@@ -314,7 +310,7 @@ export default function Tours() {
               );
             })}
 
-            <Button variant="outlined" size="small" onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))} disabled={currentPage === totalPages} className="rounded-xl">
+            <Button variant="outlined" size="small" onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))} disabled={currentPage === totalPages} className="rounded-xl min-w-[40px] h-10">
               <ChevronRight className="w-5 h-5" />
             </Button>
           </div>

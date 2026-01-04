@@ -176,6 +176,7 @@ export default function MusicList() {
                 width={54}
                 height={54}
                 className="rounded-lg object-cover"
+                unoptimized
               />
               <div>
                 <p className="font-medium text-xs max-w-[270px] line-clamp-2">

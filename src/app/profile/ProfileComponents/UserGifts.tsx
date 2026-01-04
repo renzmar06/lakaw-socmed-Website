@@ -73,6 +73,7 @@ function UserGifts() {
           ))}
         </div>
       ) : reels.length > 0 ? (
+      <div className="px-3 sm:px-4 lg:px-0">
         <div className="grid 2xl:grid-cols-6 xl:grid-cols-5 md:grid-cols-4 grid-cols-2 gap-4 max-w-5xl">
           {reels.map((gift, idx) => (
             <div
@@ -84,6 +85,7 @@ function UserGifts() {
                 alt="gift"
                 width={100}
                 height={100}
+                unoptimized
               />
               <div className="rounded-2xl background-opacityGradient flex place-items-center gap-3 px-3 py-1.5">
                 <Image
@@ -91,6 +93,7 @@ function UserGifts() {
                   alt="coin"
                   width={20}
                   height={20}
+                  unoptimized
                 />
                 <p className="font-medium text-[12px] text-dark">
                   {gift.gift_value}
@@ -105,6 +108,7 @@ function UserGifts() {
               <SkeletonReelCard key={`load-more-${idx}`} />
             ))}
         </div>
+      </div>
       ) : (
         <div className="flex flex-col justify-center items-center gap-1 py-32">
           <Image
@@ -112,6 +116,7 @@ function UserGifts() {
             alt="no gift"
             width={100}
             height={100}
+            unoptimized
           />
           <p className="text-[11px] font-normal text-dark">No Gifts Found.</p>
         </div>

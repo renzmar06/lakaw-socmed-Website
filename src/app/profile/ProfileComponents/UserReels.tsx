@@ -100,13 +100,14 @@ const fetchReels = async (page = 1) => {
       <div>
         {reels?.length > 0 ? (
           <>
-            <div className="grid 2xl:grid-cols-6 xl:grid-cols-5 md:grid-cols-4 grid-cols-2 gap-4">
+          <div className="px-3 sm:px-4 lg:px-0">
+            <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3 sm:gap-4">
               {reels.map((item) => (
                 <div key={item.social_id} className="flex flex-col gap-1">
-                  <div className="relative rounded-lg overflow-hidden h-[250px] bg-black">
+                  <div className="relative rounded-lg overflow-hidden bg-black aspect-[9/16]">
                     <video
                       src={item?.Media?.[0]?.media_location}
-                      className="h-full w-full object-cover cursor-pointer"
+                      className="absolute inset-0 w-full h-full object-cover cursor-pointer"
                       playsInline
                       autoPlay
                       muted
@@ -118,10 +119,10 @@ const fetchReels = async (page = 1) => {
                         dispatch(setActiveUserId(item.User.user_id));
                       }}
                     />
-                    <div className="absolute bottom-0 left-0 w-full h-[70px] bg-gradient-to-t from-black via-black/40 to-transparent z-10" />
-                    <div className="flex gap-1 place-items-center absolute bottom-2 left-2 z-20 text-white">
-                      <AiOutlineEye />
-                      <p className="text-primary font-medium text-xs">{item.total_views}</p>
+                    <div className="absolute bottom-0 left-0 w-full h-[30%] bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10" />
+                    <div className="flex items-center gap-1 absolute bottom-2 left-2 z-20 text-white">
+                      <AiOutlineEye className="w-4 h-4" />
+                      <p className="text-xs font-medium">{item.total_views}</p>
                     </div>
                   </div>
                 </div>
@@ -134,6 +135,7 @@ const fetchReels = async (page = 1) => {
 
             {/* Infinite scroll trigger */}
             <div ref={observerRef} className="h-10" />
+          </div>
           </>
         ) : !loading ? (
           <div className="flex flex-col justify-center items-center gap-2 py-32">
