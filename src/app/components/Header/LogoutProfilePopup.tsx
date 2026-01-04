@@ -45,7 +45,7 @@ function LogoutProfilePopup() {
             router.push("/profile"); // manual navigation
           }}
         >
-          <Image src="/SidebarIcons/profile.png" width={20} height={20} alt="profile" />
+          <Image src="/SidebarIcons/profile0.png" width={20} height={20} alt="profile" />
           <p className="text-dark font-light text-[14px]">My Profile</p>
         </div>
 
