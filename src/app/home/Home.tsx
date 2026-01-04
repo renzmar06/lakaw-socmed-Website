@@ -317,7 +317,7 @@ function Home() {
                 {/* 🔇 Mute button */}
                 <button
                   onClick={() => setMuted((prev) => !prev)}
-                  className="absolute cursor-pointer sm:bottom-4 bottom-12 sm:right-4 right-3 bg-dark/50 text-primary p-2 text-xs rounded-full z-20"
+                  className="absolute cursor-pointer sm:bottom-4 bottom-12 sm:right-4 right-3 bg-dark/50 text-primary p-2 text-xs rounded-full z-20 mb-[25px]"
                 >
                   <Image
                     src={muted ? "/home/muted.png" : "/home/unmuted.png"}
@@ -353,8 +353,9 @@ function Home() {
 
                 {/* 📃 Caption + Username */}
                 <div
-                  className="absolute md:bottom-0 pb-6 bottom-9 left-0 px-4 text-primary w-full space-y-2
-                bg-gradient-to-t  from-[#000000cc] via-[#00000080] to-transparent z-10"
+                  className="absolute md:bottom-0 bottom-9 left-0 w-full space-y-2 text-primary
+                  bg-gradient-to-t from-[#000000cc] via-[#00000080] to-transparent z-10
+                  pb-[30px] px-4 pt-4"
                 >
                   <div className="flex items-center gap-2 mb-4">
                     {/* username and music ======= */}

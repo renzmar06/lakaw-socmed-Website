@@ -139,6 +139,7 @@ function SendGift() {
                     width={60}
                     height={60}
                     className="rounded-lg"
+                    unoptimized
                   />
                   <div className="flex items-center gap-1 background-opacityGradient py-1.5 px-3 rounded-lg">
                     <Image src="/profile/coin.png" alt="coin" width={16} height={16} />
