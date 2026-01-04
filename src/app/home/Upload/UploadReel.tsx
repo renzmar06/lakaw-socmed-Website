@@ -107,13 +107,19 @@ function UploadReel() {
         }
       );
       const responseData: UploadSocialRes = await response.json();
-      if (responseData.status) toast.success(responseData.message);
+      if (responseData.status) {
+        toast.success(responseData.message)
+        dispatch(hideModal("UploadReel"));
+        dispatch(clearSelectedMusic());
+        dispatch(clearVideo());
+        window.location.replace("/");
+      } else{
+         toast.error(responseData.message || "Upload failed");
+      }
 
-      dispatch(hideModal("UploadReel"));
-      dispatch(clearSelectedMusic());
-      dispatch(clearVideo());
-      window.location.replace("/");
+      
     } catch (error) {
+      toast.error("Something went wrong during upload!");
     } finally {
       setLoading(false);
     }
@@ -191,7 +197,11 @@ function UploadReel() {
             />
           </div>
         )}
-
+        {loading && (
+          <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+            <div className="w-16 h-16 rounded-full border-4 border-t-transparent border-b-transparent border-l-primary border-r-pink-500 animate-spin-slow shadow-lg"></div>
+          </div>
+        )}
         <button
           className="bg-main-green text-primary w-full text-sm rounded-xl py-2 cursor-pointer"
           onClick={handleSubmit}

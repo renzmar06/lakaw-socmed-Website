@@ -297,7 +297,7 @@ function ActionButtons({ reel, setReels, user_id }: ActionButtonsProps) {
         </button>
 
         {activeCommentPostId === reel.social_id && (
-          <div className="absolute left-[60px] bottom-12 h-[400px] w-[350px]">
+          <div className="absolute right-0 top-[-50px] md:top-[-200px!important] h-[400px] w-[350px]">
             <ReelComment />
           </div>
         )}

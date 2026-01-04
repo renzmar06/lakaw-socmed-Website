@@ -47,6 +47,7 @@ const EmojiPickerButton: React.FC<EmojiPickerButtonProps> = ({ onSelect }) => {
             }}
             height={350}
             width={300}
+            style={{ left: "40px" }}
           />
         </div>
       )}
