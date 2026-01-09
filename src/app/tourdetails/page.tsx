@@ -60,14 +60,15 @@ export default function TourDetail() {
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const tourId = urlParams.get('id');
+    const pageNum = urlParams.get('page') || '1';  
     if (tourId) {
-      fetchTour(tourId);
+      fetchTour(tourId, parseInt(pageNum));
     }
   }, []);
 
-  const fetchTour = async (id: string) => {
+  const fetchTour = async (id: string, pageNum: number) => {
     try {
-      const response = await fetch(`${API_BASE}?page=1`);
+      const response = await fetch(`${API_BASE}?page=${pageNum}`);
       const data = await response.json();
       if (data.status === 'success') {
         const foundTour = data.data.data.find((t: Tour) => t.id === parseInt(id));

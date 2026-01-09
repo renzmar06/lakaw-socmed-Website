@@ -275,7 +275,7 @@ export default function Tours() {
           <AnimatePresence mode="wait">
             <motion.div key={`${currentPage}-${searchQuery}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {sortedTours.map((tour, index) => (
-                <TourCard key={tour.id} tour={tour} index={index} />
+                <TourCard key={tour.id} tour={tour} index={index} pagenum={currentPage} />
               ))}
             </motion.div>
           </AnimatePresence>

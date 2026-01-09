@@ -25,11 +25,12 @@ type Tour = {
 type TourCardProps = {
   tour: Tour
   index?: number
+  pagenum?: number
 }
 
 /* ============== COMPONENT ============== */
 
-export default function TourCard({ tour, index = 0 }: TourCardProps) {
+export default function TourCard({ tour, index = 0, pagenum = 0}: TourCardProps) {
   const imageUrl = tour.features_image
     ? `${API_BASE}/uploads/tour/features/${tour.features_image}`
     : "https://images.unsplash.com/photo-1488085061387-422e29b40080?w=800"
@@ -44,7 +45,7 @@ export default function TourCard({ tour, index = 0 }: TourCardProps) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
     >
-      <Link href={createPageUrl("tourdetails", { id: tour.id })}>
+      <Link href={createPageUrl("tourdetails", { id: tour.id, page: pagenum })}>
         <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 bg-white rounded-2xl">
           <div className="relative overflow-hidden">
             <div className="aspect-[4/3] overflow-hidden bg-slate-100">
